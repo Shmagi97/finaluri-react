@@ -10,7 +10,7 @@ import { Link, useFetcher } from 'react-router-dom'
 
 const HomePage = ()=> {
   
-  // const {setGethomemasiv} = useContext(Context)
+  const {setGethomemasiv} = useContext(Context)
  
 
   useEffect(()=> {
@@ -36,13 +36,15 @@ const HomePage = ()=> {
        
      ]
 
-    //  setGethomemasiv(listCountvri)
+     setGethomemasiv(listCountvri)
+    //  console.log(listCountvri)
 
   },[])
    
  
-
-  //  console.log(listCountvri)
+  // mapit links moaq title da deskripsheni
+   
+  
 
   
     return (

@@ -14,7 +14,7 @@ function App() {
   
   const [getmasiv, setGetmasiv] = useState([])
   const [getlinkvalue, setGetlinkvalue] = useState({})
-  // const [gethomemasiv, setGethomemasiv] = useState([])
+  const [gethomemasiv, setGethomemasiv] = useState([])
   const [getname, setGetname] = useState([])
    const getName = [... new Set(getname?.map((el)=> el.country)) ]
 
@@ -27,14 +27,9 @@ function App() {
     } else {return false}
   })
 
-  function getvalue(valueFn){
-      
-    setGetlinkvalue(valueFn)
- }
+ 
+  console.log(getlinkvalue)
 
- console.log(getlinkvalue)
-
-  
   // const countMasiv = useSelector(state=> state.count)
   // const dispatch = useDispatch()  
 
@@ -52,8 +47,9 @@ function App() {
      filterGetMasiv,
      setGetlinkvalue,
      getlinkvalue,
-    //  setGethomemasiv,
+     setGethomemasiv,
      setGetname,
+     gethomemasiv,
    }}>
      
    <main className="homePageMain">
@@ -64,18 +60,19 @@ function App() {
            
               <nav>  
                  <Link to={'/'}>Home</Link>
-                {/* sssssssssssss */}
-                 <select name="" id="">
-                      {getName.map((el, index)=> 
- 
-                         <option key={index} value={el} onClick={()=> getvalue(value)}>
-                              {el}
-                         </option>
-       
-                      )}
+                
+                 <select name="" id="" onChange={(event)=> setGetlinkvalue(event.target.value)}>
+                      {getName.map((el, index)=> {
+
+                        return <option key={index} value={el}>
+                                  {el}
+                               </option>
+                      })}
                    </select>
-                   <Link  to={`/${getlinkvalue}`} onClick={()=> getvalue(getlinkvalue)}>   </Link> 
-                      {/* sssssssssssss */}
+
+
+                   <Link  to={`/${getlinkvalue}`} > Search  </Link> 
+                      
               </nav>
 
             <Weather/>

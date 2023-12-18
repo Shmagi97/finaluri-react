@@ -5,13 +5,13 @@ import { Context } from "../context/context"
 
 const University = ()=> {
     const params = useParams()
-    const {getlinkvalue} = useContext(Context)
-    // console.log(getlinkvalue)
+    const {gethomemasiv} = useContext(Context)
+    console.log(gethomemasiv)
 
     return(
         <>
           
-          <p>es aris </p>
+         
           <p>university of {params.page} </p>
           
         </>
