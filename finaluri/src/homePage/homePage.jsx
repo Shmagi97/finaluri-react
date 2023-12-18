@@ -10,7 +10,7 @@ import { Link, useFetcher } from 'react-router-dom'
 
 const HomePage = ()=> {
   
-  const {setGethomemasiv} = useContext(Context)
+  // const {setGethomemasiv} = useContext(Context)
  
 
   useEffect(()=> {
@@ -36,7 +36,7 @@ const HomePage = ()=> {
        
      ]
 
-     setGethomemasiv(listCountvri)
+    //  setGethomemasiv(listCountvri)
 
   },[])
    

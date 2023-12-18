@@ -29,17 +29,20 @@ const Masiv = ()=> {
 }
 
 const MasivUniversity = () => {
+
+    const { setGetname} = useContext(Context)  
     
     useMemo(()=>{
 
-        axios.get(`http://universities.hipolabs.com/search?country=Georgia`)
+        axios.get(`http://universities.hipolabs.com/search?country&limit=20`)
         .then(res => {
     
             const resdata = res.data
-          
+            setGetname(resdata)
+            //   console.log(resdata)
+           
          
-         
-        //    console.log(res)
+           
         })
      
         .catch((error)=> console.log(error))

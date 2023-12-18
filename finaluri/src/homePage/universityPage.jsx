@@ -6,7 +6,7 @@ import { Context } from "../context/context"
 const University = ()=> {
     const params = useParams()
     const {getlinkvalue} = useContext(Context)
-    console.log(getlinkvalue)
+    // console.log(getlinkvalue)
 
     return(
         <>
