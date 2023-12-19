@@ -1,0 +1,42 @@
+.univerisyDiv {
+  width: 95%;
+  margin: 0 auto;
+
+  margin-top: 150px;
+  background-color: rgb(133, 133, 133);
+}
+
+h1 {
+  height: 50px;
+  text-align: center;
+  font-size: 35px !important;
+}
+
+.univerisyDiv2 {
+  display: flex;
+  gap: 20px;
+  color: antiquewhite;
+  margin: 10px 0px;
+  padding: 0px 10px;
+}
+
+.univerisyDiv2 > li {
+  background-color: rgb(116, 116, 116);
+  border-radius: 15px;
+  padding: 6px;
+  cursor: pointer;
+}
+
+.univerisyDiv2 > li:hover {
+  background-color: rgb(85, 85, 85);
+  color: rgb(252, 252, 251);
+}
+
+.univerisyDiv2 > a {
+  display: none;
+}
+
+.univerisyDiv2 > li:hover ~ a {
+  display: block;
+  color: brown;
+}

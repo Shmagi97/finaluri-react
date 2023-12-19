@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react'
 import '../homePage/homePage.css'
-import { MasivUniversity, Masiv } from '../masiv/masiv'
+import {  Masiv } from '../masiv/masiv'
 import Weather from '../weather/weather'
 import { Context } from '../context/context'
 import { Link, useFetcher } from 'react-router-dom'
@@ -13,43 +13,47 @@ const HomePage = ()=> {
   const {setGethomemasiv} = useContext(Context)
  
 
-  useEffect(()=> {
-    const listCountvri = [
+  // useEffect(()=> {
+  //   const listCountvri = [
      
       
-      {
-        title: 'pirveli',
-        description: "pirvelis shesaxeb"
-      }, 
+  //     {
+  //       title: 'pirveli',
+  //       description: "pirvelis shesaxeb"
+  //     }, 
   
-      {
-        title:  'meore',
-        description: 'meores shesaxeb'
-      },
+  //     {
+  //       title:  'meore',
+  //       description: 'meores shesaxeb'
+  //     },
   
-      {
-        title:  'mesame',
-        description: 'mesames shesaxeb'
-      }
+  //     {
+  //       title:  'mesame',
+  //       description: 'mesames shesaxeb'
+  //     }
   
   
        
-     ]
+  //    ]
 
-     setGethomemasiv(listCountvri)
-    //  console.log(listCountvri)
+  //    setGethomemasiv(listCountvri)
+  //   //  console.log(listCountvri)
 
-  },[])
+   
+
+  //  return listCountvri.map((el)=> <Link to={el.title}>{el.title}</Link>)
+
+  // },[])
    
  
-  // mapit links moaq title da deskripsheni
+
    
   
 
   
-    return (
-      <div>home page</div>
-    )
+    // return (
+    //   <div>home page</div>
+    // )
   
 
     

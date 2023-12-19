@@ -7,15 +7,17 @@ import { Context } from '../context/context';
 import { useEffect, useMemo, useState } from 'react';
 import University from '../homePage/universityPage';
 import NotFound from '../notFound/notFound';
-import { Masiv, MasivUniversity } from '../masiv/masiv';
+import { Masiv, MasivUniversityName, MasivUniversityPages, } from '../masiv/masiv';
 import Weather from '../weather/weather';
 
 function App() {
   
   const [getmasiv, setGetmasiv] = useState([])
   const [getlinkvalue, setGetlinkvalue] = useState({})
-  const [gethomemasiv, setGethomemasiv] = useState([])
+  // const [gethomemasiv, setGethomemasiv] = useState([])
   const [getname, setGetname] = useState([])
+   const [page, setPage] = useState([])
+
    const getName = [... new Set(getname?.map((el)=> el.country)) ]
 
   // console.log(getName)
@@ -28,7 +30,7 @@ function App() {
   })
 
  
-  console.log(getlinkvalue)
+  // console.log(getlinkvalue)
 
   // const countMasiv = useSelector(state=> state.count)
   // const dispatch = useDispatch()  
@@ -47,31 +49,32 @@ function App() {
      filterGetMasiv,
      setGetlinkvalue,
      getlinkvalue,
-     setGethomemasiv,
      setGetname,
-     gethomemasiv,
+     setPage,
+     page,
    }}>
      
    <main className="homePageMain">
           <Masiv/>
-          <MasivUniversity/>
+          <MasivUniversityName/>
+          <MasivUniversityPages/>
          
           <header>
            
               <nav>  
-                 <Link to={'/'}>Home</Link>
+                 <Link to={'/'} className='link'>Home</Link>
                 
-                 <select name="" id="" onChange={(event)=> setGetlinkvalue(event.target.value)}>
+                 <select className='homePageOpshenSection' name="" id="" onChange={(event)=> setGetlinkvalue(event.target.value)}>
                       {getName.map((el, index)=> {
 
-                        return <option key={index} value={el}>
+                        return <option  key={index} value={el}>
                                   {el}
                                </option>
                       })}
                    </select>
 
 
-                   <Link  to={`/${getlinkvalue}`} > Search  </Link> 
+                   <Link  to={`/${getlinkvalue}`}  className='link'> Search  </Link> 
                       
               </nav>
 
@@ -79,12 +82,12 @@ function App() {
           </header>
     
        
-      <section className='section'>
+      <section >
 
       <Routes>
         <Route path='/' element = {<HomePage/>}> </Route> 
         <Route path='/:page' element = {<University/> }> </Route> 
-         <Route path='*' element = {<NotFound/>}> </Route> 
+        <Route path='*' element = {<NotFound/>}> </Route> 
       </Routes>
 
    

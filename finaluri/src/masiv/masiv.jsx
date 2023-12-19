@@ -28,7 +28,7 @@ const Masiv = ()=> {
     
 }
 
-const MasivUniversity = () => {
+const MasivUniversityName = () => {
 
     const { setGetname} = useContext(Context)  
     
@@ -51,4 +51,29 @@ const MasivUniversity = () => {
     
 }
 
-export  {Masiv, MasivUniversity}
+const MasivUniversityPages = () => {
+
+    const { setPage, getlinkvalue} = useContext(Context)  
+    
+    useMemo(()=>{
+
+        axios.get(`http://universities.hipolabs.com/search?country=${getlinkvalue}`)
+        .then(res => {
+    
+            const resdata = res.data
+            setPage(resdata)
+              console.log(resdata)
+           
+         
+           
+        })
+     
+        .catch((error)=> console.log(error))
+    
+       },[getlinkvalue])
+    
+}
+
+
+
+export  {Masiv, MasivUniversityName, MasivUniversityPages}
