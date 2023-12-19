@@ -20,14 +20,14 @@ h1 {
   padding: 0px 10px;
 }
 
-.univerisyDiv2 > li {
+.univerisyDiv2 > button {
   background-color: rgb(116, 116, 116);
   border-radius: 15px;
   padding: 6px;
   cursor: pointer;
 }
 
-.univerisyDiv2 > li:hover {
+.univerisyDiv2 > button:hover {
   background-color: rgb(85, 85, 85);
   color: rgb(252, 252, 251);
 }
@@ -36,7 +36,7 @@ h1 {
   display: none;
 }
 
-.univerisyDiv2 > li:hover ~ a {
+.univerisyDiv2 > button:hover ~ a {
   display: block;
   color: brown;
 }

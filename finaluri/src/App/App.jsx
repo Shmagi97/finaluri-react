@@ -14,13 +14,13 @@ function App() {
   
   const [getmasiv, setGetmasiv] = useState([])
   const [getlinkvalue, setGetlinkvalue] = useState({})
-  // const [gethomemasiv, setGethomemasiv] = useState([])
+  const [getlink, setGetlink] = useState([])
   const [getname, setGetname] = useState([])
    const [page, setPage] = useState([])
 
-   const getName = [... new Set(getname?.map((el)=> el.country)) ]
+  
+  const getName = [... new Set(getname?.map((el)=> el.country)) ]
 
-  // console.log(getName)
   const objectGetMasiv = Object.entries(getmasiv)
  
   const filterGetMasiv = objectGetMasiv?.filter((el,index)=> {
@@ -28,6 +28,12 @@ function App() {
       return true
     } else {return false}
   })
+
+
+  function getLinkFn (valueFn){
+    setGetlink(valueFn)
+    
+  }
 
  
   // console.log(getlinkvalue)
@@ -52,6 +58,7 @@ function App() {
      setGetname,
      setPage,
      page,
+     getlink,
    }}>
      
    <main className="homePageMain">
@@ -72,10 +79,10 @@ function App() {
                                </option>
                       })}
                    </select>
+                   
 
-
-                   <Link  to={`/${getlinkvalue}`}  className='link'> Search  </Link> 
-                      
+                   <Link  to={`/${getlinkvalue}`}  onClick={ ()=> getLinkFn(getlinkvalue) } className='link'> Search  </Link> 
+                       
               </nav>
 
             <Weather/>
