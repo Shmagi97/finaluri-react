@@ -60,7 +60,7 @@ const MasivUniversityPages = () => {
     
             const resdata = res.data
             setPage(resdata)
-              console.log(resdata)
+            //   console.log(resdata)
            
          
            

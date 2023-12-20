@@ -9,15 +9,18 @@ const Header = ()=> {
        
       const getUseRef = useRef()
 
-      console.log(getUseRef)
-  
        const {getname, setGetlink, setGetnumbervalue} = useContext(Context)
         const getName = [... new Set(getname?.map((el)=> el.country)) ]
   
-         const [getlinkvalue, setGetlinkvalue] = useState({})
-
+         const [getlinkvalue, setGetlinkvalue] = useState('Ukraine')
+        
+  //  daamate ifi slaisze 
+        const sliceGetLinkvalue =  getlinkvalue.slice(7) 
+         
+         
       function getLinkFn (valueFn){
       setGetlink(valueFn)
+       console.log(sliceGetLinkvalue)
     
       }
 
