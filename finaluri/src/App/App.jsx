@@ -36,6 +36,7 @@ function App() {
   }
 
  
+ 
   // console.log(getlinkvalue)
 
   // const countMasiv = useSelector(state=> state.count)
@@ -59,6 +60,7 @@ function App() {
      setPage,
      page,
      getlink,
+    
    }}>
      
    <main className="homePageMain">

@@ -12,8 +12,10 @@ import { Context } from '../context/context';
 
  const  Weather = ()=> {
   
- const {filterGetMasiv} = useContext(Context)
-//  console.log(getmasiv, 'ffff')
+ const {filterGetMasiv, rame} = useContext(Context)
+
+
+//  console.log(filterGetMasiv, 'ffff')
 
   return (
       

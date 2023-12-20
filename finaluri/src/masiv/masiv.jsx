@@ -10,14 +10,14 @@ const Masiv = ()=> {
    
    useMemo(()=>{
 
-    axios.get(`https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m`)
+    axios.get(`http://api.weatherapi.com/v1/current.json?key=API Key: 6fed595429684ee796a184244231912&q=0162&aqi=no `)
     .then(res => {
 
-        const resdata = res.data
-         setGetmasiv(resdata)
+        // const resdata = res.data
+        //  setGetmasiv(resdata)
      
      
-     //   console.log(data)
+       console.log(res)
     })
  
     .catch((error)=> console.log(error))
@@ -54,15 +54,15 @@ const MasivUniversityName = () => {
 const MasivUniversityPages = () => {
 
     const {getlink, setPage, getlinkvalue} = useContext(Context)  
-    console.log(getlink, 'in masiv')
+
     useMemo(()=>{
 
         axios.get(`http://universities.hipolabs.com/search?country=${getlink}`)
         .then(res => {
     
             const resdata = res.data
-            setPage(resdata)
-              console.log(resdata)
+            // setPage(resdata)
+            //   console.log(resdata)
            
          
            
