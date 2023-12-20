@@ -1,31 +1,28 @@
-import { useContext, useEffect, useState } from 'react'
-import '../homePage/homePage.css'
-import {  Masiv, MasivUniversityName, MasivUniversityPages } from '../masiv/masiv'
-import Weather from '../weather/weather'
-import { Context } from '../context/context'
-import { Link, useFetcher } from 'react-router-dom'
+import { useContext, useState } from "react"
+import { Link } from "react-router-dom"
+import { Masiv, MasivUniversityName, MasivUniversityPages } from "../masiv/masiv"
+import Weather from "../weather/weather"
+import { Context } from "../context/context"
 
 
-
-
-
-const HomePage = ()=> {
-
-  // const {page} = useContext(Context)
+const Header = ()=> {
+     
+     
+        const {page} = useContext(Context)
   
-  // const {getname} = useContext(Context)
-  // const getName = [... new Set(getname?.map((el)=> el.country)) ]
+       const {getname, setGetlink} = useContext(Context)
+        const getName = [... new Set(getname?.map((el)=> el.country)) ]
   
-  // const [getlinkvalue, setGetlinkvalue] = useState({})
+         const [getlinkvalue, setGetlinkvalue] = useState({})
 
-  // function getLinkFn (valueFn){
-  //   setGetlink(valueFn)
+      function getLinkFn (valueFn){
+      setGetlink(valueFn)
     
-  // }
+      }
  
-  return(
-    <>
-{/*      
+    return (
+        <>
+         
          <Masiv/>
           <MasivUniversityName/>
           <MasivUniversityPages/>
@@ -46,25 +43,19 @@ const HomePage = ()=> {
                    
 
                    <Link  to={`/${getlinkvalue}`}  onClick={ ()=> getLinkFn(getlinkvalue) } className='link'> Search  </Link> 
-                       
+                    {/* daamate raodenoba masividan */}
+                     <input type="number" />  
               </nav>
            <div>
               <Weather/>
            </div>
            
           </header>
-     */}
-
-   
-    </>
-
     
-  )
 
-
-    
-  
+        
+        </>
+    )
 }
 
-
-export default HomePage
+export default Header

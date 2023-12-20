@@ -25,6 +25,13 @@
   width: 40%;
 }
 
+.homePageMain > header > div {
+  display: flex;
+  justify-content: center;
+
+  width: 300px;
+}
+
 .link {
   background-color: rgb(150, 143, 143);
   border-radius: 15px;

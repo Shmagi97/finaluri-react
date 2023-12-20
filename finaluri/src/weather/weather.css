@@ -1,3 +1,26 @@
-/* .weatherSection {
-  background-color: #4b515d;
-} */
+.sectionMtavari {
+}
+
+.divRelativ {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.divAbsolute {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  display: none;
+}
+
+.divRelativ:hover {
+  transition: 4s;
+  background-color: rgb(0, 0, 0);
+  border-radius: 15px;
+  width: 70px;
+}
+
+.divRelativ:hover ~ .divAbsolute {
+  display: block;
+}

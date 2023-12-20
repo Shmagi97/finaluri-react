@@ -10,14 +10,12 @@ const Masiv = ()=> {
    
    useMemo(()=>{
 
-    axios.get(`http://api.weatherapi.com/v1/current.json?key=API Key: 6fed595429684ee796a184244231912&q=0162&aqi=no `)
+    axios.get(`http://api.weatherapi.com/v1/current.json?key=6fed595429684ee796a184244231912&q=Tbilisi&aqi=no `)
     .then(res => {
 
-        // const resdata = res.data
-        //  setGetmasiv(resdata)
-     
-     
-       console.log(res)
+        const resdata = res.data
+         setGetmasiv(resdata)
+        //  console.log(resdata)
     })
  
     .catch((error)=> console.log(error))
@@ -53,15 +51,15 @@ const MasivUniversityName = () => {
 
 const MasivUniversityPages = () => {
 
-    const {getlink, setPage, getlinkvalue} = useContext(Context)  
+    const {getlink, setPage} = useContext(Context)  
 
     useMemo(()=>{
 
-        axios.get(`http://universities.hipolabs.com/search?country=${getlink}`)
+        axios.get(`http://universities.hipolabs.com/search?country=${getlink}&limit=10`)
         .then(res => {
     
             const resdata = res.data
-            // setPage(resdata)
+            setPage(resdata)
             //   console.log(resdata)
            
          
