@@ -15,6 +15,7 @@ function App() {
   const [getlink, setGetlink] = useState([])
   const [getname, setGetname] = useState([])
    const [page, setPage] = useState([])
+   const [getnumbervalue, setGetnumbervalue] = useState(50)
 
   const objectGetMasiv = Object.entries(getmasiv)
 
@@ -40,13 +41,15 @@ function App() {
      getlink,
      getname,
      setGetlink,
+     setGetnumbervalue,
+     getnumbervalue,
     
    }}>
      
    <main className="homePageMain">
          
         
-         <Header/>
+      <Header/>
        
       <section >
 

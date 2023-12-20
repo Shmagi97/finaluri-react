@@ -1,0 +1,67 @@
+.headerHeder {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(182, 181, 181);
+  border-radius: 15px;
+  width: 90%;
+  top: 0;
+  height: 70px;
+}
+
+.headerHeder > nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+}
+
+.headerHeder > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+}
+
+.link {
+  background-color: rgb(150, 143, 143);
+  border-radius: 15px;
+  width: 50px;
+  height: 27px;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(6, 6, 6);
+}
+
+.link:hover {
+  background-color: rgb(116, 107, 107);
+  color: rgb(229, 225, 225);
+}
+
+.homePageOpshenSection {
+  background-color: rgb(150, 143, 143);
+  color: antiquewhite;
+  outline: none;
+  box-shadow: 3px 6px #888888;
+}
+
+.homePageOpshenSection > option {
+  box-shadow: 5px 15px #888888;
+}
+
+.headerHeder > nav > input {
+  outline: none;
+  width: 100px;
+  text-align: center;
+  padding: 0px 0px 3px 0px;
+  background-color: #888888;
+  box-shadow: 5px 4px #888888;
+  color: antiquewhite;
+}
+
+.headerHeder > nav > input::placeholder {
+  color: antiquewhite;
+  font-size: 13px;
+}

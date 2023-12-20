@@ -1,16 +1,17 @@
-import { useContext, useState } from "react"
+import { useContext, useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import { Masiv, MasivUniversityName, MasivUniversityPages } from "../masiv/masiv"
 import Weather from "../weather/weather"
 import { Context } from "../context/context"
-
+import '../header/header.css'
 
 const Header = ()=> {
-     
-     
-        const {page} = useContext(Context)
+       
+      const getUseRef = useRef()
+
+      console.log(getUseRef)
   
-       const {getname, setGetlink} = useContext(Context)
+       const {getname, setGetlink, setGetnumbervalue} = useContext(Context)
         const getName = [... new Set(getname?.map((el)=> el.country)) ]
   
          const [getlinkvalue, setGetlinkvalue] = useState({})
@@ -19,6 +20,8 @@ const Header = ()=> {
       setGetlink(valueFn)
     
       }
+
+
  
     return (
         <>
@@ -27,12 +30,12 @@ const Header = ()=> {
           <MasivUniversityName/>
           <MasivUniversityPages/>
          
-          <header>
+          <header className="headerHeder" ref={getUseRef}>
            
-              <nav>  
+             <nav>  
                  <Link to={'/'} className='link'>Home</Link>
                 
-                 <select className='homePageOpshenSection' name="" id="" onChange={(event)=> setGetlinkvalue(event.target.value)}>
+                  <select className='homePageOpshenSection' name="" id="" onChange={(event)=> setGetlinkvalue(event.target.value)}>
                       {getName.map((el, index)=> {
 
                         return <option  key={index} value={el}>
@@ -40,15 +43,14 @@ const Header = ()=> {
                                </option>
                       })}
                    </select>
-                   
-
+                    
+                   <input type="number" placeholder="რაოდენობა"  onChange={(event)=> setGetnumbervalue(event.target.value)}/>  
                    <Link  to={`/${getlinkvalue}`}  onClick={ ()=> getLinkFn(getlinkvalue) } className='link'> Search  </Link> 
-                    {/* daamate raodenoba masividan */}
-                     <input type="number" />  
-              </nav>
-           <div>
+                 
+            </nav>
+            <div>
               <Weather/>
-           </div>
+            </div>
            
           </header>
     

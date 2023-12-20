@@ -51,16 +51,16 @@ const MasivUniversityName = () => {
 
 const MasivUniversityPages = () => {
 
-    const {getlink, setPage} = useContext(Context)  
+    const {getlink, setPage, getnumbervalue} = useContext(Context)  
 
     useMemo(()=>{
 
-        axios.get(`http://universities.hipolabs.com/search?country=${getlink}&limit=10`)
+        axios.get(`http://universities.hipolabs.com/search?country=${getlink}&limit=${getnumbervalue}`)
         .then(res => {
     
             const resdata = res.data
             setPage(resdata)
-            //   console.log(resdata)
+              console.log(resdata)
            
          
            
@@ -68,7 +68,7 @@ const MasivUniversityPages = () => {
      
         .catch((error)=> console.log(error))
     
-       },[getlink])
+       },[getlink, getnumbervalue])
     
 }
 
