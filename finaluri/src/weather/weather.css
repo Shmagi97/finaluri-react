@@ -25,3 +25,23 @@
 .divRelativ:hover ~ .divAbsolute {
   display: block;
 }
+
+.stepHad {
+  display: grid !important;
+  justify-content: center;
+  row-gap: 20px;
+}
+
+.step1 {
+  text-align: center;
+}
+
+.step2 {
+  text-align: center;
+  font-size: 47px;
+}
+
+.step3 {
+  display: flex;
+  column-gap: 10px;
+}

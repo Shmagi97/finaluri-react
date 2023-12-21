@@ -34,12 +34,12 @@ import { Context } from '../context/context';
        
   
       <MDBContainer className="h-100">
-        <MDBRow className="justify-content-center align-items-center h-100">
+        <MDBRow className="">
           <MDBCol style={{width: "300px"}}>
             <MDBCard style={{ color: "#4B515D", borderRadius: "35px" }}>
-              <MDBCardBody className="p-4">
-                <div className="d-flex">
-                  <MDBTypography tag="h6" className="flex-grow-1">
+              <MDBCardBody className="stepHad">
+                <div className="step1">
+                  <MDBTypography tag="h6" className="">
 
                   {objectGetMasiv.slice(0, 1).map((el, index)=> {
                    
@@ -62,10 +62,10 @@ import { Context } from '../context/context';
                   </MDBTypography>
                 </div>
 
-                <div className="d-flex flex-column text-center mt-5 mb-4">
+                <div className="step2">
                   <MDBTypography
                     tag="h6"
-                    className="display-4 mb-0 font-weight-bold"
+                    className=""
                     style={{ color: "#1C2331" }}
                   >
 
@@ -81,15 +81,15 @@ import { Context } from '../context/context';
                   
                 </div>
 
-                <div className="d-flex align-items-center">
-                  <div className="flex-grow-1" style={{fontSize: '1rem'}}>
+                <div className="step3">
+                  <div className="" style={{fontSize: '1rem'}}>
                     <div>
                       <MDBIcon
                         fas
                         icon="wind fa-fw"
                         style={{ color: "#868B94" }}
                       />{" "}
-                      <span className="ms-1"> 
+                      <span className=""> 
                       
                       {objectGetMasiv.slice(1, 2).map((el, index)=> {
                    
