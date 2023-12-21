@@ -16,9 +16,11 @@ function App() {
   const [getname, setGetname] = useState([])
    const [page, setPage] = useState([])
    const [getnumbervalue, setGetnumbervalue] = useState(50)
+   const [homepagemasiv, setHomepagemasiv] = useState([])
+
 
   const objectGetMasiv = Object.entries(getmasiv)
-
+   
 
   // const countMasiv = useSelector(state=> state.count)
   // const dispatch = useDispatch()  
@@ -43,15 +45,17 @@ function App() {
      setGetlink,
      setGetnumbervalue,
      getnumbervalue,
+     setHomepagemasiv,
+     homepagemasiv,
     
    }}>
      
-   <main className="homePageMain">
+   <main className="appPageMain">
          
         
       <Header/>
        
-      <section >
+      <section className='appPageMainSection'>
 
       <Routes>
         <Route path='/' element = {<HomePage/>}> </Route> 

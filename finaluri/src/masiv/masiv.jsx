@@ -72,6 +72,29 @@ const MasivUniversityPages = () => {
     
 }
 
+const HomePageMasiv = () => {
+
+    const {setHomepagemasiv, getnumbervalue} = useContext(Context)  
+
+    useMemo(()=>{
+
+        axios.get(`https://unicatalog.ge/api/unis?locale=ka`)
+        .then(res => {
+    
+            const resdata = res.data
+            setHomepagemasiv(resdata)
+            //   console.log(resdata)
+           
+         
+           
+        })
+     
+        .catch((error)=> console.log(error))
+    
+       },[])
+    
+}
 
 
-export  {Masiv, MasivUniversityName, MasivUniversityPages}
+
+export  {Masiv, MasivUniversityName, MasivUniversityPages, HomePageMasiv}

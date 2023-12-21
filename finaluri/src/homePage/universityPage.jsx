@@ -28,7 +28,7 @@ const University = ()=> {
                   {el.name}
                   </button>
 
-                  <a href={el.web_pages}> click of {params.page} university</a>
+                  <a href={el.web_pages}> click of {params.page} </a>
                   
                 </div>  
 

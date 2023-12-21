@@ -4,11 +4,12 @@
   box-sizing: border-box;
 }
 
-.homePageMain {
+.appPageMain {
   width: 90%;
   margin: 0 auto;
 }
 
-.homePageMain > section {
-  /* border: solid red; */
+.appPageMainSection {
+  width: 95%;
+  margin: 120px auto;
 }

@@ -1,6 +1,6 @@
 import { useContext, useRef, useState } from "react"
 import { Link } from "react-router-dom"
-import { Masiv, MasivUniversityName, MasivUniversityPages } from "../masiv/masiv"
+import { HomePageMasiv, Masiv, MasivUniversityName, MasivUniversityPages } from "../masiv/masiv"
 import Weather from "../weather/weather"
 import { Context } from "../context/context"
 import '../header/header.css'
@@ -13,14 +13,19 @@ const Header = ()=> {
         const getName = [... new Set(getname?.map((el)=> el.country)) ]
   
          const [getlinkvalue, setGetlinkvalue] = useState('Ukraine')
-        
-  //  daamate ifi slaisze 
-        const sliceGetLinkvalue =  getlinkvalue.slice(7) 
+          
+         let rame = getlinkvalue
+
+         if (getlinkvalue.length > 7){
+          rame  =  getlinkvalue.slice(7) 
          
+         }  else {rame = getlinkvalue}
+
+        
          
       function getLinkFn (valueFn){
       setGetlink(valueFn)
-       console.log(sliceGetLinkvalue)
+      
     
       }
 
@@ -32,7 +37,7 @@ const Header = ()=> {
          <Masiv/>
           <MasivUniversityName/>
           <MasivUniversityPages/>
-         
+          <HomePageMasiv/>
           <header className="headerHeder" ref={getUseRef}>
            
              <nav>  
@@ -48,7 +53,7 @@ const Header = ()=> {
                    </select>
                     
                    <input type="number" placeholder="რაოდენობა"  onChange={(event)=> setGetnumbervalue(event.target.value)}/>  
-                   <Link  to={`/${getlinkvalue}`}  onClick={ ()=> getLinkFn(getlinkvalue) } className='link'> Search  </Link> 
+                   <Link  to={`/${rame}`}  onClick={ ()=> getLinkFn(getlinkvalue) } className='link'> Search  </Link> 
                  
             </nav>
             <div>

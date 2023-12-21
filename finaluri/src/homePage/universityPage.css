@@ -1,9 +1,10 @@
 .univerisyDiv {
   width: 95%;
   margin: 0 auto;
-
-  margin-top: 150px;
   background-color: rgb(133, 133, 133);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
@@ -13,8 +14,10 @@ h1 {
 }
 
 .univerisyDiv2 {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
   gap: 20px;
+  justify-content: center;
   color: antiquewhite;
   margin: 10px 0px;
   padding: 0px 10px;
@@ -25,6 +28,7 @@ h1 {
   border-radius: 15px;
   padding: 6px;
   cursor: pointer;
+  min-width: 300px;
 }
 
 .univerisyDiv2 > button:hover {
