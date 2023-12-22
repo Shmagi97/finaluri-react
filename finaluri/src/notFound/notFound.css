@@ -1,0 +1,16 @@
+.notFound {
+  background-color: rgb(182, 181, 181);
+  border-radius: 15px;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notFound > div {
+  text-align: center;
+}
+
+.notFound > div > h2 {
+  font-size: 30px;
+}

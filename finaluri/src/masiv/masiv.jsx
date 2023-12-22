@@ -4,6 +4,7 @@ import { Context } from '../context/context';
 import { useContext, useEffect, useMemo } from 'react';
 
 
+
 const Masiv = ()=> {
  
     const {setGetmasiv} = useContext(Context)  
@@ -94,7 +95,6 @@ const HomePageMasiv = () => {
        },[])
     
 }
-
 
 
 export  {Masiv, MasivUniversityName, MasivUniversityPages, HomePageMasiv}

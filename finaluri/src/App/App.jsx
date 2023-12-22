@@ -9,6 +9,7 @@ import University from '../homePage/universityPage';
 import NotFound from '../notFound/notFound';
 import Header from '../header/header';
 
+
 function App() {
   
   const [getmasiv, setGetmasiv] = useState([])
@@ -17,6 +18,7 @@ function App() {
    const [page, setPage] = useState([])
    const [getnumbervalue, setGetnumbervalue] = useState(50)
    const [homepagemasiv, setHomepagemasiv] = useState([])
+   const [pagininfo, setPegininfo] = useState()
 
 
   const objectGetMasiv = Object.entries(getmasiv)
@@ -27,6 +29,7 @@ function App() {
 
   return (
     <>
+ 
 
     {/* <button onClick={()=> dispatch({type : 'INCREMENT'})}>mimateba</button>
      <br></br>
@@ -47,12 +50,14 @@ function App() {
      getnumbervalue,
      setHomepagemasiv,
      homepagemasiv,
+     setPegininfo,
+     pagininfo,
     
    }}>
      
    <main className="appPageMain">
          
-        
+   
       <Header/>
        
       <section className='appPageMainSection'>
@@ -61,10 +66,13 @@ function App() {
         <Route path='/' element = {<HomePage/>}> </Route> 
         <Route path='/:page' element = {<University/> }> </Route> 
         <Route path='*' element = {<NotFound/>}> </Route> 
+       
       </Routes>
-
+     
+      
    
     </section>
+  
     </main>
 
     </Context.Provider>

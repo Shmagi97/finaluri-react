@@ -1,8 +1,15 @@
-
+import '../notFound/notFound.css'
 
 const NotFound = ()=> {
     return(
-        <p>gverdi ver moidzebna</p>
+        <div className="notFound">  
+          <div>
+             <h2>'404'_ not found</h2>
+             <p>გვერდი ვერ მოიძებნა</p>
+          </div>
+               
+        </div>
+      
     )
 }
 

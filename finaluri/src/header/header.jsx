@@ -5,6 +5,7 @@ import Weather from "../weather/weather"
 import { Context } from "../context/context"
 import '../header/header.css'
 
+
 const Header = ()=> {
        
       const getUseRef = useRef()
@@ -29,11 +30,9 @@ const Header = ()=> {
     
       }
 
-
- 
     return (
         <>
-         
+       
          <Masiv/>
           <MasivUniversityName/>
           <MasivUniversityPages/>
@@ -61,9 +60,7 @@ const Header = ()=> {
             </div>
            
           </header>
-    
 
-        
         </>
     )
 }

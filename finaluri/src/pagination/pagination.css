@@ -1,0 +1,26 @@
+.paginationDiv {
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40%;
+  margin: 40px auto 0px auto;
+  background-color: rgb(182, 181, 181);
+  border-radius: 3px;
+}
+
+.paginationDiv > li {
+  background-color: aliceblue;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  list-style: none;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 13px;
+  border-radius: 3px;
+}
+
+.paginationDiv > li:hover {
+  background-color: white;
+}
